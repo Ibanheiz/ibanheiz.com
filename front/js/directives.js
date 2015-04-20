@@ -3,7 +3,7 @@
 
   angular.module('app.directives',
     [
-      'app.modules.Client.directives'
+      "app.modules.Site.directives"
     ]);
 
 }(angular));

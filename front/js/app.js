@@ -51,10 +51,10 @@
         }).
         when('/404', {
           templateUrl: 'expose/main/404',
-          controller: 'UserController'
+          controller: 'SiteController'
         }).
         otherwise({
-          redirectTo: '/mean-seed/404'
+          redirectTo: '/404'
         });
       $locationProvider.html5Mode(true);
     }]);
