@@ -42,8 +42,14 @@
 
         element.on('mouseover', function () {
           var portfolioBackground = element.next();
-          var randomBackground = backgrounds[Math.floor(Math.random()*backgrounds.length)];
-          portfolioBackground.removeClass(randomBackground);
+
+          // Gera nova posição até ser diferente da última
+          do {
+            var posicao = gerarPosicaoBackground(backgrounds.length);
+          } while (scope.ultimaPosicao === posicao);
+
+          scope.ultimaPosicao = posicao;
+          var randomBackground = backgrounds[posicao];
           portfolioBackground.addClass(randomBackground);
 
           element.on('mouseleave', function () {
@@ -52,6 +58,10 @@
         });
       }
     };
+  }
+
+  function gerarPosicaoBackground(size) {
+    return Math.floor(Math.random() * size);
   }
 
   angular.module('app.modules.Site.directives', [])
