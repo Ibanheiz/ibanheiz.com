@@ -41,11 +41,12 @@
         ];
 
         element.on('mouseover', function () {
-          var portfolioBackground = element.next();
+          var posicao,
+              portfolioBackground = element.next();
 
           // Gera nova posição até ser diferente da última
           do {
-            var posicao = gerarPosicaoBackground(backgrounds.length);
+            posicao = gerarPosicaoBackground(backgrounds.length);
           } while (scope.ultimaPosicao === posicao);
 
           scope.ultimaPosicao = posicao;
