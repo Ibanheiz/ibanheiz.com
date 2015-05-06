@@ -13,7 +13,7 @@
     .controller('SiteController', SiteController);
 
   // Inject
-  SiteController.$inject = ['$scope', '$http', '$timeout', '$location' ];
+  SiteController.$inject = ['$scope', '$http', '$timeout', '$location'];
 
 }(angular));
 
