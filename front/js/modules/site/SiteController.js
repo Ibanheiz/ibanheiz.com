@@ -9,7 +9,7 @@
   }
 
   // Controllers
-  angular.module('app.modules.Site.controllers', [])
+  angular.module('app.modules.Site.controllers', ['duScroll'])
     .controller('SiteController', SiteController);
 
   // Inject
