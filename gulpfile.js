@@ -1,94 +1,62 @@
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var stylus = require('gulp-stylus');
-var path = require('path');
-var gutil = require('gulp-util');
-var minifyCss = require('gulp-minify-css');
-var imagemin = require('gulp-imagemin');
-var nodemon = require('gulp-nodemon');
-var rename = require('gulp-rename');
-var livereload = require('gulp-livereload');
-var styleFiles = 'front/css/stylus/*.styl';
-var styleFilesModules = 'front/css/stylus/**/*.styl';
-var jsFiles = [
-  'front/js/*.js',
-  'front/js/modules/**/*.js'
+var modularGulp = require('gulp-modular-tasks')(gulp);
+
+var styleFiles = 'front/css/stylus/*.styl',
+  styleFilesModules = 'front/css/stylus/**/*.styl',
+  jsFiles = [
+    'front/js/*.js',
+    'front/js/modules/**/*.js'
+  ],
+  jsComponents = [
+    'front/components/**/angular.min.js',
+    'front/components/**/*min.js',
+  ],
+  jsComponentsMaps = [
+    'front/components/**/*min.js.map',
+  ];
+
+// Files e tasks para o livereload
+var watchers = [
+  {
+    file: jsFiles,
+    task: 'minify-concat:js'
+  },
+  {
+    file: styleFiles,
+    task: 'build:stylus'
+  },
+  {
+    file: styleFilesModules,
+    task: 'build:stylus'
+  }
 ];
-var jsComponents = [
-  'front/components/**/angular.min.js',
-  'front/components/**/*min.js',
-];
-var jsComponentsMaps = [
-  'front/components/**/*min.js.map',
-];
 
-gulp.task('lint', function () {
-  gulp.src(jsFiles)
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
-});
+// Compila Stylus e concatena o css
+gulp.task('build:stylus', modularGulp.createTask('stylus', styleFiles, 'front/css'));
 
-gulp.task('stylus', function () {
-  gulp.src(styleFiles)
-    .pipe(stylus({
-      paths: [ path.join(__dirname, 'stylus', 'includes') ]
-    }))
-    .pipe(minifyCss({keepBreaks: false}))
-    .pipe(gulp.dest('front/css'))
-    .pipe(livereload());
-});
+// Verifica a qualidade do código js utilizando o Lint js
+gulp.task('lint', modularGulp.createTask('lint', jsFiles));
 
-gulp.task("bower", function () {
-  gulp.src(jsComponents)
-    .pipe(sourcemaps.init())
-    .pipe(concat('components.js'))
-    .pipe(gulp.dest("front/js/min"));
-});
+// Minifica e concatena todos os js da aplicação
+gulp.task('minify-concat:js', ['lint'], modularGulp.createTask('minify-concat', jsFiles, 'all.min.js', 'front/js/min'));
 
-gulp.task("bower-map", function () {
-  gulp.src(jsComponentsMaps)
-    .pipe(rename({dirname: ''}))
-    .pipe(gulp.dest("front/js/min"));
-});
+// Concate todas as libs minifcadas baixadas pelo bower
+gulp.task('bower-concat', ['copy-bower-map'], modularGulp.createTask('concat', jsComponents, 'components.min.js', 'front/js/min'));
 
-gulp.task('minify', ['lint'], function () {
-  gulp.src(jsFiles)
-    .pipe(sourcemaps.init())
-    .pipe(uglify().on('error', gutil.log)) // notice the event here
-    .pipe(concat('all.min.js'))
-    .pipe(gulp.dest('front/js/min'))
-    .pipe(livereload());
-});
+// Copia os maps das libs minificadas baixadas pelo bower
+gulp.task('copy-bower-map', modularGulp.createTask('copy', jsComponentsMaps, 'front/js/min'));
 
-gulp.task('images-opt', function () {
-  gulp.src('front/image/original/*.*')
-    .pipe(imagemin({
-      optimizationLevel: 5,
-      progressive: true
-    }))
-    .pipe(gulp.dest('front/image'));
-});
+// Ativa o nodemon
+gulp.task('nodemon', modularGulp.createTask('nodemon', 'back/bin/www'));
 
-gulp.task('watch', function () {
-  livereload.listen();
-  gulp.watch(jsFiles, ['minify']);
-  gulp.watch(styleFiles, ['stylus']);
-  gulp.watch(styleFilesModules, ['stylus']);
-  gulp.watch('back/modules/**/views/*.jade').on('change', function (file) {
-    livereload.changed(file.path);
-  });
-});
+// Ativa o liveloread e cria watchers para as pages em jade
+gulp.task('livereload', modularGulp.createTask('watch', watchers, 'back/modules/**/views/*.jade'));
 
-gulp.task('demon', function () {
-  nodemon({
-    script: 'back/bin/www',
-    ext: 'js',
-    env: { 'NODE_ENV': 'development' }
-  });
-});
+// Optimiza as imagens
+gulp.task('imageopt', modularGulp.createTask('imageopt', 'front/image/original/*.*', 'front/image'));
 
-gulp.task('default', ['demon', 'minify', 'bower', 'bower-map', 'stylus', 'watch']);
-gulp.task('imageopt', ['images-opt']);
+// Roda os testes criados com o jasmine
+gulp.task('jasmine', modularGulp.createTask('jasmine', 'back/test/*Spec.js', 'test'));
+
+// Roda com o comando 'gulp' no prestart da aplicação
+gulp.task('default', ['build:stylus', 'minify-concat:js', 'bower-concat', 'copy-bower-map', 'nodemon', 'livereload']);
