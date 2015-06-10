@@ -28,6 +28,10 @@
     };
   }
 
+  function _gerarPosicaoBackground(size) {
+    return Math.floor(Math.random() * size);
+  }
+
   function backgroundPortfolio() {
     return {
       restrict: 'A',
@@ -42,11 +46,11 @@
 
         element.on('mouseover', function () {
           var posicao,
-              portfolioBackground = element.next();
+          portfolioBackground = element.next();
 
           // Gera nova posição até ser diferente da última
           do {
-            posicao = gerarPosicaoBackground(backgrounds.length);
+            posicao = _gerarPosicaoBackground(backgrounds.length);
           } while (scope.ultimaPosicao === posicao);
 
           scope.ultimaPosicao = posicao;
@@ -61,13 +65,27 @@
     };
   }
 
-  function gerarPosicaoBackground(size) {
-    return Math.floor(Math.random() * size);
+  function pageScroll($window) {
+    return {
+      restrict: 'A',
+      link: function (scope, element, attrs) {
+        var windowEl = angular.element($window);
+        var handler = function () {
+          scope.scroll = windowEl[0].pageYOffset;
+        };
+        windowEl.on('scroll', scope.$apply.bind(scope, handler));
+        handler();
+      }
+    };
   }
 
   angular.module('app.modules.Site.directives', [])
     .directive('showMenu', showMenu)
     .directive('portfolio', portfolio)
-    .directive('backgroundPortfolio', backgroundPortfolio);
+    .directive('backgroundPortfolio', backgroundPortfolio)
+    .directive('pageScroll', pageScroll);
+
+  // Inject
+  pageScroll.$inject = ['$window'];
 
 }(angular));

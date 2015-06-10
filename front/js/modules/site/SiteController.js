@@ -9,11 +9,11 @@
   }
 
   // Controllers
-  angular.module('app.modules.Site.controllers', [])
+  angular.module('app.modules.Site.controllers', ['duScroll'])
     .controller('SiteController', SiteController);
 
   // Inject
-  SiteController.$inject = ['$scope', '$http', '$timeout', '$location' ];
+  SiteController.$inject = ['$scope', '$http', '$timeout', '$location'];
 
 }(angular));
 
