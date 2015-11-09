@@ -1,8 +1,8 @@
 module.exports = function (express) {
   var router = express.Router();
 
-  router.get('/', function (req, res) {
-    res.redirect('/site');
+  router.get(['/', '/:page', '/:page/:id'], function (req, res) {
+    res.render('main/views/index');
   });
 
   return router;

@@ -17,32 +17,23 @@ header
     width 133px
     height 46px
 
-#icon-menu
-  width 27px
-  height 22px
-  background url(../image/mobile/icon-menu.png)
-  margin  12px 12px 0 0
-
-#menu-principal
+.menu-principal
   width 100%
-  margin-top 50px
   position fixed
   background main-color
   z-index 5
-  transition(all, 0.4s, linear)
-  opacity(0)
-  visibility hidden
-  ul li
-    height 50px
+  bottom 0
+
+.menu-lista
+  display flex
+  justify-content space-between
+  li
+    width 25%
+    height 45px
+    text-align center
     a
       display block
-      height 50px
-      font-size rem(17px)
+      height 45px
+      font-size rem(15px)
       color #FFF
-      line-height 50px
-      padding-left 10px
-
-.show-menu-principal
-  visibility visible !important
-  opacity(0.92, !important)
-  transition(all, 0.4s, linear)
+      line-height 45px

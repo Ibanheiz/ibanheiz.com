@@ -3,7 +3,7 @@ var config = require('./../config/config')();
 var http = require('http');
 var app = require('./../app');
 var mongoose = require('mongoose');
-require('./../config/conexao')(config.db, mongoose);
+// require('./../config/conexao')(config.db, mongoose);
 
 app.set('port', config.port);
 var server = app.listen(app.get('port'), function() {

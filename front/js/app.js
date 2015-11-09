@@ -1,62 +1,28 @@
-(function (angular) {
-  'use strict';
+'use strict';
 
-  function checkUser($q, $http, cb) {
-    // Inicializa a promisse
-    var deferred = $q.defer();
-    // Verifica se existe um usuário autenticado
-    $http.get('/api/login/loggedin').success(function (user) {
-      cb(deferred, user);
-    });
-    return deferred.promise;
-  }
-  var auth = {
-    checkLoggedin: ['$q', '$http', '$location', function ($q, $http, $location) {
-      checkUser($q, $http, function (deferred, user) {
-        if (user !== '0') {
-          deferred.resolve();
-        } else {
-          deferred.reject();
-          $location.url('/mean-seed/login');
-        }
-      });
-    }],
-    checkLoggedOut: ['$q', '$http', '$location', function ($q, $http, $location) {
-      checkUser($q, $http, function (deferred, user) {
-        if (user !== '0') {
-          deferred.reject();
-          $location.url('/mean-seed/client');
-        } else {
-          deferred.resolve();
-        }
-      });
-    }]
-  };
+var angular = require('angular');
 
-  angular.module('app', [
-    'app.controllers',
-    'app.directives',
-    'app.filters',
-    'app.services',
-    'ngSanitize',
-    'ngRoute',
-    'ngResource',
-    'ngAnimate'
-  ])
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-      $routeProvider.
-        when('/site', {
-          templateUrl: 'expose/site/home',
-          controller: 'SiteController'
-        }).
-        when('/404', {
-          templateUrl: 'expose/main/404',
-          controller: 'SiteController'
-        }).
-        otherwise({
-          redirectTo: '/404'
-        });
-      $locationProvider.html5Mode(true);
-    }]);
-}(angular));
+require('./modules/home/_index');
+require('angular-route');
+require('angular-cookies');
+require('angular-resource');
+require('angular-sanitize');
+require('angular-animate');
+require('angular-scroll');
+require('angular-messages');
 
+var requires = [
+  'ibanheiz.Home',
+  'ngRoute',
+  'ngAnimate',
+  'ngSanitize',
+  'ngCookies',
+  'ngResource',
+  'ngMessages',
+  'duScroll'
+];
+
+angular.module('ibanheiz', requires);
+angular.module('ibanheiz').config(require('./systemConfig'));
+angular.module('ibanheiz').run(require('./systemRun'));
+angular.module('ibanheiz').constant('SystemUriConfig', require('./systemConstants'));
