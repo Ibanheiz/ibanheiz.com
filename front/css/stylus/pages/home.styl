@@ -2,6 +2,8 @@
   width 100%
   height 400px
   overflow hidden
+  @media (min-width em(1150px))
+    height 685px
   img
     height 100%
     right 30%
@@ -20,6 +22,8 @@
   opacity(0.4)
   position absolute
   z-index 1
+  @media (min-width em(1150px))
+    height 685px
 
 #topo-texto
   width 85%
@@ -28,16 +32,30 @@
   text-align center
   margin-top 100px
   color #FFF
+  @media (min-width em(1150px))
+    margin-top 200px
+
   .texto-apresentacao
     font-size rem(25px)
     text-shadow: 1px 1px 1px #666
+    @media (min-width em(1150px))
+      font-size rem(40px)
+
   .texto-destaque
     margin-top 15px
     font-size rem(35px)
     font-family "myriad semibold"
     text-shadow: 1px 1px 1px #666
+    @media (min-width em(700px))
+      font-size rem(50px)
+    @media (min-width em(1150px))
+      font-size rem(100px)
     div
       font-size rem(25px)
+      @media (min-width em(700px))
+        font-size rem(30px)
+      @media (min-width em(1150px))
+        font-size rem(70px)
 
 #botao-portfolio
   width 155px
@@ -52,6 +70,18 @@
   margin-top 300px
   opacity(0.8)
   border-radius 3px
+  transition(all, 0.2s, linear)
+  @media (min-width em(1150px))
+    margin-top 550px
+  @media (min-width em(1440px))
+    width 180px
+    height 60px
+    font-size rem(18px)
+    line-height 60px
+
+#botao-portfolio:hover
+  transition(all, 0.2s, linear)
+  background main-strong-color
 
 #portfolio
   width 100%

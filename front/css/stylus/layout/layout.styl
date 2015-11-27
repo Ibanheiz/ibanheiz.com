@@ -6,11 +6,14 @@ header
   z-index 5
   opacity(0.92)
   @extends .grid-between
+  @media (min-width: em(800px))
+    height 60px
 
 #logo
   width 96px
   height 33px
   margin 7px 0 0 12px
+  cursor pointer
   img
     width 100%
   @media (min-width: em(800px))
@@ -23,15 +26,26 @@ header
   background main-color
   z-index 5
   bottom 0
+  @media (min-width: em(800px))
+    width 50%
+    height 60px
+    top 0
+    right 0
+    background transparent
 
 .menu-lista
   display flex
   justify-content space-between
+  @media (min-width: em(800px))
+    justify-content flex-end
 
 .menu-item
   width 25%
   height 48px
   text-align center
+  transition(all, 0.2s, linear)
+  @media (min-width: em(800px))
+    width 100px
 
 .menu-item-icon
   margin 6px 0 3px 0
@@ -61,6 +75,16 @@ header
   justify-content center
   border-top 3px solid main-color
   transition(all, 0.2s, linear)
+  @media (min-width: em(800px))
+    border-top none
+    padding-top 5px
+    font-size rem(16px)
+    height 60px
+
+.menu-item-link:hover
+  @media (min-width: em(800px))
+    background main-strong-color
+    transition(all, 0.2s, linear)
 
 .menu-item-label
   @extends .menu-item-link
