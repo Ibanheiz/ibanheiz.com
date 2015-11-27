@@ -1,10 +1,22 @@
 nav.menu-principal
   ul.menu-lista
-    li
-      a(href="#" scroll-to="portfolio") Portfólio
-    li
-      a(href="#" scroll-to="sobre") Sobre
-    li
-      a(href="#" scroll-to="contato") Contato
-    li
-      a(href="#") Blog
+    li.menu-item
+      a.menu-item-link(href="#portfolio" du-smooth-scroll du-scrollspy offset="50")
+        div.menu-item-icon.icon-portfolio
+          img(src="image/mobile/portifolio.png", alt="Portifólio")
+        div.menu-item-label Portfólio
+    li.menu-item
+      a.menu-item-link(href="#sobre" du-smooth-scroll du-scrollspy offset="50")
+        div.menu-item-icon.icon-sobre
+          img(src="image/mobile/sobre.png", alt="Sobre")
+        div.menu-item-label Sobre
+    li.menu-item
+      a.menu-item-link(href="#contato" du-smooth-scroll du-scrollspy offset="50")
+        div.menu-item-icon.icon-contato
+          img(src="image/mobile/contato.png", alt="Contato")
+        div.menu-item-label Contato
+    li.menu-item
+      a.menu-item-link(href="#")
+        div.menu-item-icon.icon-blog
+          img(src="image/mobile/blog.png", alt="Blog")
+        div.menu-item-label Blog

@@ -27,13 +27,45 @@ header
 .menu-lista
   display flex
   justify-content space-between
-  li
-    width 25%
-    height 45px
-    text-align center
-    a
-      display block
-      height 45px
-      font-size rem(15px)
-      color #FFF
-      line-height 45px
+
+.menu-item
+  width 25%
+  height 48px
+  text-align center
+
+.menu-item-icon
+  margin 6px 0 3px 0
+  img
+    width 100%
+
+.icon-portfolio
+  width 26px
+
+.icon-sobre
+  width 18px
+
+.icon-contato
+  width 26px
+
+.icon-blog
+  width 21px
+  margin-top 8px
+
+.menu-item-link
+  display block
+  height 47px
+  font-size rem(12px)
+  color #FFF
+  line-height 45px
+  display flex
+  justify-content center
+  border-top 3px solid main-color
+  transition(all, 0.2s, linear)
+
+.menu-item-label
+  @extends .menu-item-link
+  margin-left 3px
+
+.active
+  border-top 5px solid #EEE
+  transition(all, 0.2s, linear)
