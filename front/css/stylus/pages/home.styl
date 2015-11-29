@@ -33,7 +33,7 @@
   margin-top 100px
   color #FFF
   @media (min-width em(1150px))
-    margin-top 200px
+    margin-top 180px
 
   .texto-apresentacao
     font-size rem(25px)
@@ -60,7 +60,7 @@
 #botao-portfolio
   width 155px
   height 45px
-  align-center-horizontal(155, px)
+  align-center-horizontal(175, px)
   background-color main-color
   color #fff
   line-height 45px
@@ -72,7 +72,7 @@
   border-radius 3px
   transition(all, 0.2s, linear)
   @media (min-width em(1150px))
-    margin-top 550px
+    margin-top 520px
   @media (min-width em(1440px))
     width 180px
     height 60px
@@ -86,7 +86,10 @@
 #portfolio
   width 100%
 
-// .portfolio-grid
+.portfolio-grid
+  @media (min-width: em(800px))
+    display flex
+    justify-content space-between
 
 .portfolio-imagem-grande
   width 100%
@@ -98,10 +101,15 @@
     padding-top 35%
   img
     width 100%
+  @media (min-width: em(800px))
+    width 50%
+    border-right 2px solid #FFF
 
 .portfolio-imagem-pequena-container
   img
     width 100%
+  @media (min-width: em(800px))
+    width 50%
 
 .portfolio-imagem-pequena
   width 100%
@@ -133,11 +141,19 @@
   font-size rem(35px)
   color #FFF
   text-shadow 1px 1px 2px #333
+  @media (min-width: em(800px))
+    font-size rem(50px)
+  @media (min-width: em(1440px))
+    font-size rem(60px)
 
 .portfolio-descricao-texto
   font-size rem(17px)
   color #FFF
   text-shadow 1px 1px 2px #333
+  @media (min-width: em(800px))
+    font-size rem(25px)
+  @media (min-width: em(1440px))
+    font-size rem(30px)
 
 .portfolio-background
   width 100%
@@ -164,22 +180,39 @@
 
 #portfolio-atuacao
   width 100%
+  @media (min-width: em(800px))
+    display flex
+    justify-content space-between
 
 .portfolio-atuacao-item
   padding 10%
+  @media (min-width: em(800px))
+    padding 3%
+    width 33.33%
 
 .portfolio-atuacao-image
   width 40%
   margin 0 auto
+  @media (min-width: em(800px))
+    width 110px
+    height 130px
+    margin 0 auto
   img
     width 100%
 
 .portfolio-atuacao-texto
   font-size rem(20px)
   color main-color
+  @media (min-width: em(800px))
+    font-size rem(22px)
+  @media (min-width: em(1440px))
+    font-size rem(25px)
   span
     color text-color
     margin-left 5px
+
+.image-top
+  padding-top 20px
 
 #portfolio-atuacao
   border-top 7px solid main-color

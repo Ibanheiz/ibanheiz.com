@@ -3,32 +3,34 @@ section#background
     div.texto-apresentacao Olá, sou Nicolas Ibanheiz e trabalho com
     div.texto-destaque Desenvolvimento
       div de sites & sistemas
-  a(href="#portfolio" du-smooth-scroll du-scrollspy offset="50" duration="1000")#botao-portfolio Veja meu trabalho
+  a(href="#portfolio" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000")#botao-portfolio Veja meu trabalho
   div.background-cobertura
   img(src="image/{{device}}/background.jpg", alt="Background")
+
 section#portfolio(du-scroll-container)
   div.portfolio-grid
-  div.portfolio-imagem-grande.image-portfolio
-    div.portfolio-descricao(data-background-portfolio)
-      div.portfolio-descricao-titulo Vai Ser Rimando
-      div.portfolio-descricao-texto #Rede social para cultura hip hop
-    div.portfolio-background
-    img(src="image/desktop/portfolio-vsr.png", alt="Vai Ser Rimando")
-  div.portfolio-imagem-pequena-container
-    div
-      div.portfolio-imagem-pequena.image-portfolio
-        div.portfolio-descricao(data-background-portfolio)
-          div.portfolio-descricao-titulo Jove Tecnologia
-          div.portfolio-descricao-texto #Site estático para catálogo
-        div.portfolio-background
-        img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
-    div
-      div.portfolio-imagem-pequena.image-portfolio
-        div.portfolio-descricao(data-background-portfolio)
-          div.portfolio-descricao-titulo Jove Tecnologia
-          div.portfolio-descricao-texto #Site estático para catálogo
-        div.portfolio-background
-        img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
+    div.portfolio-imagem-grande.image-portfolio
+      div.portfolio-descricao(data-background-portfolio)
+        div.portfolio-descricao-titulo Vai Ser Rimando
+        div.portfolio-descricao-texto #Rede social para cultura hip hop
+      div.portfolio-background
+      img(src="image/desktop/portfolio-vsr.png", alt="Vai Ser Rimando")
+    div.portfolio-imagem-pequena-container
+      div
+        div.portfolio-imagem-pequena.image-portfolio
+          div.portfolio-descricao(data-background-portfolio)
+            div.portfolio-descricao-titulo Jove Tecnologia
+            div.portfolio-descricao-texto #Site estático para catálogo
+          div.portfolio-background
+          img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
+      div
+        div.portfolio-imagem-pequena.image-portfolio
+          div.portfolio-descricao(data-background-portfolio)
+            div.portfolio-descricao-titulo Jove Tecnologia
+            div.portfolio-descricao-texto #Site estático para catálogo
+          div.portfolio-background
+          img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
+
   div#portfolio-atuacao
     div.portfolio-atuacao-item
       div.portfolio-atuacao-image
@@ -36,7 +38,7 @@ section#portfolio(du-scroll-container)
       div.portfolio-atuacao-texto Sistemas
         span web para soluções empresariais que armazenam as informações em bancos de dados com alto  nível de segurança na nuvem.
     div.portfolio-atuacao-item
-      div.portfolio-atuacao-image
+      div.portfolio-atuacao-image.image-top
         img(src="image/desktop/portfolio-icon-site.png", alt="Sites")
       div.portfolio-atuacao-texto Sites
         span estáticos ou com gerenciador de conteúdo, provendo um catálogo para seus produtos e promovendo sua marca com análise de dados.

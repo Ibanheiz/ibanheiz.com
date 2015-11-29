@@ -1,17 +1,17 @@
-nav.menu-principal
+nav.menu-principal(data-ng-controller="HomeController")
   ul.menu-lista
     li.menu-item
-      a.menu-item-link(href="#portfolio" du-smooth-scroll du-scrollspy offset="50" duration="1000")
+      a.menu-item-link(href="#portfolio" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000")
         div.menu-item-icon.icon-portfolio(data-ng-if="isMobile")
           img(src="image/mobile/portifolio.png", alt="Portifólio")
         div.menu-item-label Portfólio
     li.menu-item
-      a.menu-item-link(href="#sobre" du-smooth-scroll du-scrollspy offset="50" duration="1000")
+      a.menu-item-link(href="#sobre" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000")
         div.menu-item-icon.icon-sobre(data-ng-if="isMobile")
           img(src="image/mobile/sobre.png", alt="Sobre")
         div.menu-item-label Sobre
     li.menu-item
-      a.menu-item-link(href="#contato" du-smooth-scroll du-scrollspy offset="50" duration="1000")
+      a.menu-item-link(href="#contato" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000")
         div.menu-item-icon.icon-contato(data-ng-if="isMobile")
           img(src="image/mobile/contato.png", alt="Contato")
         div.menu-item-label Contato
