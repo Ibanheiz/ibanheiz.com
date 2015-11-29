@@ -1,50 +1,38 @@
+exibicao-portfolio(data-show-modal="showModal", data-portfolio="portfolio")
 section#background
   div#topo-texto
     div.texto-apresentacao Olá, sou Nicolas Ibanheiz e trabalho com
     div.texto-destaque Desenvolvimento
       div de sites & sistemas
-  a(href="#portfolio" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000")#botao-portfolio Veja meu trabalho
+  a#botao-portfolio(href="#portfolio" du-smooth-scroll du-scrollspy offset="{{navOffset}}" duration="1000") Veja meu trabalho
   div.background-cobertura
-  img(src="image/{{device}}/background.jpg", alt="Background")
+  img(src="/build/images/{{device}}/background.jpg", alt="Background")
 
 section#portfolio(du-scroll-container)
   div.portfolio-grid
-    div.portfolio-imagem-grande.image-portfolio
+    div.portfolio-imagem(data-ng-repeat="portfolio in portfolios track by portfolio.id"
+                         data-ng-class="{'portfolio-imagem-separacao': $index % 2 === 0}"
+                         data-ng-click="exibirPortfolio(portfolio)")
       div.portfolio-descricao(data-background-portfolio)
-        div.portfolio-descricao-titulo Vai Ser Rimando
-        div.portfolio-descricao-texto #Rede social para cultura hip hop
+        div.portfolio-descricao-titulo {{portfolio.titulo}}
+        div.portfolio-descricao-texto {{portfolio.descricao}}
       div.portfolio-background
-      img(src="image/desktop/portfolio-vsr.png", alt="Vai Ser Rimando")
-    div.portfolio-imagem-pequena-container
-      div
-        div.portfolio-imagem-pequena.image-portfolio
-          div.portfolio-descricao(data-background-portfolio)
-            div.portfolio-descricao-titulo Jove Tecnologia
-            div.portfolio-descricao-texto #Site estático para catálogo
-          div.portfolio-background
-          img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
-      div
-        div.portfolio-imagem-pequena.image-portfolio
-          div.portfolio-descricao(data-background-portfolio)
-            div.portfolio-descricao-titulo Jove Tecnologia
-            div.portfolio-descricao-texto #Site estático para catálogo
-          div.portfolio-background
-          img(src="image/desktop/portfolio-jove.png", alt="Jove Tecnologia")
+      img(data-ng-src="/build/images/desktop/{{portfolio.imagem}}", data-ng-alt="{{portfolio.imagemAlt}}")
 
   div#portfolio-atuacao
     div.portfolio-atuacao-item
       div.portfolio-atuacao-image
-        img(src="image/desktop/portfolio-icon-sistema.png", alt="Sistemas")
+        img(src="/build/images/desktop/portfolio-icon-sistema.png", alt="Sistemas")
       div.portfolio-atuacao-texto Sistemas
         span web para soluções empresariais que armazenam as informações em bancos de dados com alto  nível de segurança na nuvem.
     div.portfolio-atuacao-item
       div.portfolio-atuacao-image.image-top
-        img(src="image/desktop/portfolio-icon-site.png", alt="Sites")
+        img(src="/build/images/desktop/portfolio-icon-site.png", alt="Sites")
       div.portfolio-atuacao-texto Sites
         span estáticos ou com gerenciador de conteúdo, provendo um catálogo para seus produtos e promovendo sua marca com análise de dados.
     div.portfolio-atuacao-item
       div.portfolio-atuacao-image
-        img(src="image/desktop/portfolio-icon-mobile.png", alt="Aplicativos")
+        img(src="/build/images/desktop/portfolio-icon-mobile.png", alt="Aplicativos")
       div.portfolio-atuacao-texto Aplicativos
         span mobile para todas as plataformas com a possibilidade de comunicação externa com seu sistema ou web site.
 section#sobre
@@ -61,7 +49,7 @@ section#contato
   div.contato-titulo Entre em contato para contratar meus serviços
   div.contato-telefone
     div.contato-telefone-icon
-      img(src="image/desktop/icon-telefone.png", alt="Telefone")
+      img(src="/build/images/desktop/icon-telefone.png", alt="Telefone")
     div.contato-telefone-numero (11) 96430-3975
   div.contato-form
     form(id="form-contato")

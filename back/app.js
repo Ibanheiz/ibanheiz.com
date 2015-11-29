@@ -17,6 +17,8 @@ var routes = require('./modules/main/routes')(express);
 var api = {};
 var app = express();
 
+api.portfolio = require('./modules/home/api/routes')(express);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -34,9 +36,6 @@ app.set('view engine', 'jade');
 app.use('/', routes);
 app.use('/expose', expose);
 app.use('/partials', partials);
-
-app.get('*', function (req, res, next) {
-  res.render('main/views/index');
-});
+app.use('/api/portfolio', api.portfolio);
 
 module.exports = app;

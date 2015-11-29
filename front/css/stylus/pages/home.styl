@@ -90,38 +90,26 @@
   @media (min-width: em(800px))
     display flex
     justify-content space-between
+    flex-wrap wrap
 
-.portfolio-imagem-grande
-  width 100%
-  position relative
-  border-top 2px solid #FFF
-  .portfolio-descricao
-    padding-top 40%
-  .portfolio-descricao:hover
-    padding-top 35%
-  img
-    width 100%
-  @media (min-width: em(800px))
-    width 50%
-    border-right 2px solid #FFF
-
-.portfolio-imagem-pequena-container
-  img
-    width 100%
-  @media (min-width: em(800px))
-    width 50%
-
-.portfolio-imagem-pequena
+.portfolio-imagem
   width 100%
   position relative
   border-top 2px solid #FFF
   .portfolio-descricao
     padding-top 20%
-  .portfolio-descricao:hover
-    padding-top 15%
   img
     width 100%
     position relative
+  @media (min-width: em(800px))
+    width 50%
+
+.portfolio-imagem-separacao
+  @media (min-width: em(800px))
+    border-right 2px solid #FFF
+
+.portfolio-descricao:hover
+  padding-top 15%
 
 .portfolio-descricao
   width 100%
@@ -129,7 +117,7 @@
   position absolute
   z-index 2
   text-align center
-  opacity 0.3
+  opacity 0.7
   transition(all, 0.4s, linear)
 
 .portfolio-descricao:hover
@@ -161,7 +149,7 @@
   height 100%
   position absolute
   background #333
-  opacity 0.7
+  opacity 0.8
   z-index 1
   transition(all, 0.4s, linear)
 
@@ -176,6 +164,12 @@
 
 .portfolio-color-yellow
   background #3D3E00
+
+.portfolio-color-orange
+  background #3a2400
+
+.portfolio-color-purple
+  background #3d002a
 
 
 #portfolio-atuacao

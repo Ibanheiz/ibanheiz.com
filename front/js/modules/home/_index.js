@@ -6,7 +6,8 @@ var bulk              = require('bulk-require');
 var homeModule = [
   'ibanheiz.Home.controllers',
   'ibanheiz.Home.directives',
-  'ibanheiz.Home.factories'
+  'ibanheiz.Home.factories',
+  'ibanheiz.Home.services'
 ];
 
 module.exports = angular.module('ibanheiz.Home', homeModule);

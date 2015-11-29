@@ -18,6 +18,8 @@ function backgroundPortfolio() {
           "portfolio-color-red",
           "portfolio-color-green",
           "portfolio-color-blue",
+          "portfolio-color-orange",
+          "portfolio-color-purple",
           "portfolio-color-yellow"
         ];
 
