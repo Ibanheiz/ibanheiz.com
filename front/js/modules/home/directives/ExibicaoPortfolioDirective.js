@@ -15,9 +15,19 @@ function exibicaoPortfolio($timeout) {
       portfolio: "="
     },
     link: function (scope, element, attrs) {
+      var ESC = 27;
+
       $timeout(function () {
         element.removeAttr('style');
-      }, 1000)
+      }, 1000);
+
+      var container = angular.element(document.getElementsByClassName('modal-portfolio-container'));
+      container.bind('keyup', function (event) {
+        if (event.keyCode === ESC) {
+          scope.fecharModal();
+          scope.$apply();
+        }
+      });
 
       scope.fecharModal = function () {
         scope.showModal = !scope.showModal;

@@ -1,3 +1,15 @@
-div.modal-portfolio-container(data-ng-show="showModal", style="display: none;")
-  div.modal-close(data-ng-click="fecharModal()") x
-  div.titulo-container {{portfolio.titulo}}
+div.modal-portfolio-container(data-ng-show="showModal", style="display: none;", tabindex="0")
+  div.modal-close(data-ng-click="fecharModal()", title="Fechar") x
+  div.modal-header-grid
+    div.modal-header-titulo-container
+      div.modal-header-titulo {{portfolio.titulo}}
+      div.modal-header-descricao {{portfolio.descricao}}
+    div.modal-header-sobre-container
+      div.modal-header-sobre-titulo Home
+      div.modal-header-sobre-descricao Página principal da rede social, com conteúdo compartilhado pelos próprios usuários. É possível filtrar o conteúdo para cada estado brasileiro, além de se cadastrar através do facebook e entrar na sua conta.
+      div.modal-header-sobre-grid
+        div.modal-header-sobre-andamento  #Em andamento
+        div.modal-header-sobre-link-grid
+          div.modal-header-sobre-link-icon
+            img(src="/build/images/desktop/portfolio-link-icon.png", alt="Link ícone", target="_blank")
+          a.modal-header-sobre-link(href="#") vaiserrimando.com.br
