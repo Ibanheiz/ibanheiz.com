@@ -6,23 +6,105 @@
   transition all linear 0.5s
   z-index 100
   opacity 0.95
+  padding 2%
 
 .modal-portfolio-container.ng-hide
   opacity 0
   transition all linear 0.5s
 
 .modal-close
+  font-family sans-serif
   cursor pointer
-  font-size rem(40px)
-  color main-color
+  font-size rem(35px)
+  color #FFF
   position absolute
-  top 15px
-  right 20px
-  font-weight bold
+  top 0
+  right 12px
+  color #EEE
+  @media (min-width: em(800px))
+    font-size rem(40px)
+    color main-color
+    top 15px
+    right 25px
 
-.titulo-container
+.modal-header-grid
   width 100%
-  margin-top 100px
-  font-size rem(50px)
+  @media (min-width: em(800px))
+    height 165px
+    display flex
+    justify-content space-between
+    position relative
+
+.modal-header-titulo-container
+  width 100%
+  background main-color
+  padding 2%
+  color #FFF
+  @media (min-width: em(800px))
+    text-align center
+    width 50%
+    padding 2.5% 2%
+
+.modal-header-titulo
+  width 100%
+  font-size rem(30px)
+  @media (min-width: em(800px))
+    font-size rem(55px)
+
+.modal-header-descricao
+  width 100%
+  font-size rem(25px)
+
+.modal-header-sobre-container
+  width 100%
+  margin-top 5px
+  position absolute
+  @media (min-width: em(800px))
+    height 165px
+    margin-top 0
+    padding 0 2%
+    width 50%
+
+.modal-header-sobre-titulo
+  font-size rem(20px)
+  color #000
+  @media (min-width: em(800px))
+    font-size rem(25px)
+
+.modal-header-sobre-descricao
+  font-size rem(15px)
+  color #333
+  @media (min-width: em(800px))
+    font-size rem(17px)
+  @media (min-width: em(1024px))
+    font-size rem(20px)
+
+.modal-header-sobre-grid
+  width 90%
+  @media (min-width: em(800px))
+    display flex
+    position absolute
+    justify-content space-between
+    flex-direction row-reverse
+    bottom 0
+
+.modal-header-sobre-link-grid
+  display flex
+  justify-content flex-start
+
+.modal-header-sobre-link
   color main-color
-  text-align center
+  margin-left 10px
+  transition(all, 0.2s, linear)
+  @media (min-width: em(800px))
+    margin-left 6px
+    margin-top 3px
+
+.modal-header-sobre-link:hover
+  color main-strong-color
+  transition(all, 0.2s, linear)
+  text-decoration underline
+
+.modal-header-sobre-andamento
+  margin-top 5px
+  right 0
