@@ -19,7 +19,8 @@ function HomeController($scope, HomeService) {
 
   $scope.exibirPortfolio = function (portfolio) {
     $scope.portfolio = portfolio;
-    // $scope.showModal = !$scope.showModal;
+    $scope.portfolio.itemSelecionado = portfolio.itens[0];
+    $scope.showModal = !$scope.showModal;
   };
 }
 
