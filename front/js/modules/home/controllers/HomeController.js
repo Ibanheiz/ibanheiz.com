@@ -19,7 +19,7 @@ function HomeController($scope, HomeService) {
 
   $scope.exibirPortfolio = function (portfolio) {
     $scope.portfolio = portfolio;
-    $scope.showModal = !$scope.showModal;
+    // $scope.showModal = !$scope.showModal;
   };
 }
 
