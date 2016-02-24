@@ -2,41 +2,42 @@ module.exports = [
   {
     id:           1,
     titulo:       'Coletivo Educação',
-    descricao:    '#Plataforma de vendas de curso',
+    subtitulo:    '#Plataforma de vendas de curso',
+    descricao:    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus. Phasellus quis pretium orci. Etiam vestibulum nibh sed iaculis lacinia. Nunc dui mauris, pellentesque ut luctus non, placerat vitae urna. Etiam aliquet in elit quis fermentum. Aenean ut ante venenatis, pellentesque nibh eget, volutpat mauris. ',
     imagem:       'portfolio-coletivo.jpg',
     imagemAlt:    'Coletivo Educação',
-    link:         '#',
+    link:         'coletivoeducacao.com.br',
     finalizado:    false,
     layoutMobile:  false,
     itens: [
       {
         id:            1,
         pagina:        'Home',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'coletivo/coletivo-home.jpg'
       },
       {
         id:            2,
         pagina:        'Núcleos',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'coletivo/coletivo-nucleos.jpg'
       },
       {
         id:            3,
         pagina:        'Categorias',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'coletivo/coletivo-categorias.jpg'
       },
       {
         id:            4,
         pagina:        'Curso',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'coletivo/coletivo-curso.jpg'
       },
       {
         id:            5,
         pagina:        'Login',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'coletivo/coletivo-login.jpg'
       }
     ]
@@ -44,7 +45,8 @@ module.exports = [
   {
     id:           2,
     titulo:       'Notify-e',
-    descricao:    '#Serviços de mensageria',
+    subtitulo:    '#Serviços de mensageria',
+    descricao:    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus. Phasellus quis pretium orci. Etiam vestibulum nibh sed iaculis lacinia. Nunc dui mauris, pellentesque ut luctus non, placerat vitae urna. Etiam aliquet in elit quis fermentum. Aenean ut ante venenatis, pellentesque nibh eget, volutpat mauris. ',
     imagem:       'portfolio-notifye.jpg',
     imagemAlt:    'Notify-e',
     link:         'notifye.io',
@@ -66,19 +68,19 @@ module.exports = [
       {
         id:            3,
         pagina:        'Contratação',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'notifye/notifye-contratacao.jpg'
       },
       {
         id:            4,
         pagina:        'Dashboard',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'notifye/notifye-dashboard.jpg'
       },
       {
         id:            5,
         pagina:        'Documentação',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'notifye/notifye-docs.jpg'
       }
     ]
@@ -86,7 +88,8 @@ module.exports = [
   {
     id:           3,
     titulo:       'Loc Prime',
-    descricao:    '#Catálogo para produtos e serviços',
+    subtitulo:    '#Catálogo para produtos e serviços',
+    descricao:    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus. Phasellus quis pretium orci. Etiam vestibulum nibh sed iaculis lacinia. Nunc dui mauris, pellentesque ut luctus non, placerat vitae urna. Etiam aliquet in elit quis fermentum. Aenean ut ante venenatis, pellentesque nibh eget, volutpat mauris. ',
     imagem:       'portfolio-locprime.jpg',
     imagemAlt:    'Loc Prime',
     link:         'www.locprime.com.br',
@@ -96,31 +99,31 @@ module.exports = [
       {
         id:            1,
         pagina:        'Home',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'locprime/locprime-home.jpg'
       },
       {
         id:            2,
         pagina:        'Produtos',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'locprime/locprime-produtos.jpg'
       },
       {
         id:            3,
         pagina:        'Serviços',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'locprime/locprime-servicos.jpg'
       },
       {
         id:            4,
         pagina:        'Eventos',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'locprime/locprime-eventos.jpg'
       },
       {
         id:            5,
         pagina:        'Relatórios',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'locprime/locprime-relatorios.jpg'
       }
     ]
@@ -128,7 +131,8 @@ module.exports = [
   {
     id:           4,
     titulo:       'Vai Ser Rimando',
-    descricao:    '#Rede social para cultura hip hop',
+    subtitulo:    '#Rede social para cultura hip hop',
+    descricao:    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus. Phasellus quis pretium orci. Etiam vestibulum nibh sed iaculis lacinia. Nunc dui mauris, pellentesque ut luctus non, placerat vitae urna. Etiam aliquet in elit quis fermentum. Aenean ut ante venenatis, pellentesque nibh eget, volutpat mauris. ',
     imagem:       'portfolio-vaiserrimando.jpg',
     imagemAlt:    'Vai Ser Rimando',
     link:         'vaiserrimando.com.br',
@@ -138,31 +142,31 @@ module.exports = [
       {
         id:            1,
         pagina:        'Home',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'vsr/vsr-home.jpg'
       },
       {
         id:            2,
         pagina:        'Músicas',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'vsr/vsr-musicas.jpg'
       },
       {
         id:            3,
         pagina:        'Player',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'vsr/vsr-player.jpg'
       },
       {
         id:            4,
         pagina:        'Notícias',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'vsr/vsr-noticia.jpg'
       },
       {
         id:            5,
         pagina:        'Cadastro',
-        descricao:     'Descrição.',
+        descricao:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida turpis ultrices nulla varius, a mattis lacus aliquam. Curabitur posuere iaculis metus rutrum sodales. Vivamus pulvinar iaculis diam at tempus.',
         imagem:        'vsr/vsr-cadastro.jpg'
       }
     ]
