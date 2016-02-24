@@ -13,6 +13,7 @@ div.modal-portfolio-container-background(data-ng-show="showModal", style="displa
             img(src="/build/images/desktop/portfolio-link-icon.png", alt="Link ícone", target="_blank")
           a.modal-header-sobre-link(data-ng-href="http://{{portfolio.link}}", target="_blank") {{portfolio.link}}
         div.modal-header-sobre-andamento(data-ng-if="!portfolio.finalizado")  Projeto em andamento
+        div.modal-header-sobre-andamento(data-ng-if="portfolio.finalizado")  Projeto concluído
     div.modal-portfolio-imagens-container
       div.modal-portfolio-imagens(data-ng-repeat="item in portfolio.itens track by item.id")
         div.modal-header-sobre-titulo {{item.pagina}}
