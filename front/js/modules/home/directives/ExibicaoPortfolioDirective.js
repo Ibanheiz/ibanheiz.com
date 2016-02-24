@@ -36,11 +36,9 @@ function exibicaoPortfolio($timeout, $document) {
 
       scope.$watch('showModal', function (newValue) {
         $timeout(function () {
-          console.log('scrolando');
           var topo = angular.element(document.getElementById('topoModal'));
-          console.log(topo);
           $document.scrollToElement(topo, 0, 1);
-        }, 2000);
+        }, 1000);
 
         if (newValue) {
           angular.element(document.getElementsByTagName('body')).addClass('hide-body-scroll');

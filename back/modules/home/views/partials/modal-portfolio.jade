@@ -5,7 +5,7 @@ div.modal-portfolio-container-background(data-ng-show="showModal", style="displa
     div.modal-header-titulo-container
       div.modal-header-titulo {{portfolio.titulo}}
       div.modal-header-subtitulo {{portfolio.subtitulo}}
-      div.modal-header-descricao {{portfolio.descricao}}
+      div.modal-header-descricao(data-ng-bind-html="portfolio.descricao")
     div.modal-header-sobre-container
       div.modal-header-sobre-grid
         div.modal-header-sobre-link-grid
