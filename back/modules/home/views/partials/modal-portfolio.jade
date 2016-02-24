@@ -1,21 +1,22 @@
-div.modal-portfolio-container(data-ng-show="showModal", style="display: none;", tabindex="0")
-  div.modal-close(data-ng-click="fecharModal()", title="Fechar", tabindex="1") x
-  div.modal-header-titulo-container
-    div.modal-header-titulo {{portfolio.titulo}}
-    div.modal-header-descricao {{portfolio.descricao}}
-  div.modal-header-sobre-container
-    div.modal-header-sobre-grid
-      div.modal-header-sobre-andamento(data-ng-if="!portfolio.finalizado")  #Em andamento
-      div.modal-header-sobre-link-grid
-        div.modal-header-sobre-link-icon
-          img(src="/build/images/desktop/portfolio-link-icon.png", alt="Link ícone", target="_blank")
-        a.modal-header-sobre-link(data-ng-href="http://{{portfolio.link}}", target="_blank") {{portfolio.link}}
-  div.modal-portfolio-imagens-container
-    div.modal-portfolio-imagens(data-ng-repeat="item in portfolio.itens track by item.id")
-      div.modal-header-sobre-titulo {{item.pagina}}
-      div.modal-header-sobre-descricao {{item.descricao}}
-      img.modal-portfolio-imagens-item(data-ng-src="/build/images/desktop/portfolio/notifye/{{item.imagem}}",
-                                       data-ng-if="!portfolio.layoutMobile")
-      img.modal-portfolio-imagens-item(data-ng-src="/build/images/{{device}}/portfolio/notifye/{{item.imagem}}",
-                                       data-ng-if="portfolio.layoutMobile")
-      div.modal-portfolio-item-divisor
+div.modal-portfolio-container-background(data-ng-show="showModal", style="display: none;", tabindex="0")
+  div.modal-portfolio-container
+    div.modal-close(data-ng-click="fecharModal()", title="Fechar", tabindex="1") x
+    div.modal-header-titulo-container
+      div.modal-header-titulo {{portfolio.titulo}}
+      div.modal-header-descricao {{portfolio.descricao}}
+    div.modal-header-sobre-container
+      div.modal-header-sobre-grid
+        div.modal-header-sobre-andamento(data-ng-if="!portfolio.finalizado")  #Em andamento
+        div.modal-header-sobre-link-grid
+          div.modal-header-sobre-link-icon
+            img(src="/build/images/desktop/portfolio-link-icon.png", alt="Link ícone", target="_blank")
+          a.modal-header-sobre-link(data-ng-href="http://{{portfolio.link}}", target="_blank") {{portfolio.link}}
+    div.modal-portfolio-imagens-container
+      div.modal-portfolio-imagens(data-ng-repeat="item in portfolio.itens track by item.id")
+        div.modal-header-sobre-titulo {{item.pagina}}
+        div.modal-header-sobre-descricao {{item.descricao}}
+        img.modal-portfolio-imagens-item(data-ng-src="/build/images/desktop/portfolio/{{item.imagem}}",
+                                         data-ng-if="!portfolio.layoutMobile")
+        img.modal-portfolio-imagens-item(data-ng-src="/build/images/{{device}}/portfolio/{{item.imagem}}",
+                                         data-ng-if="portfolio.layoutMobile")
+        div.modal-portfolio-item-divisor
