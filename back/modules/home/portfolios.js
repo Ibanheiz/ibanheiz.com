@@ -3,7 +3,7 @@ module.exports = [
     id:           1,
     titulo:       'Coletivo Educação',
     subtitulo:    '#Plataforma de vendas de curso',
-    descricao:    'Criação de layout e desenvolvimento da completo da plataforma de venda de cursos e video aulas. O usuário que se registrar para ter acesso à área do aluno poderá adquirir cursos, através a integração com a PagSeguro. Este trabalho estou realizando em conjunto com o especialista em Amazon Web Services <a href="https://github.com/joaquimsn" target="_blank">Joaquim Neto</a>.',
+    descricao:    'Criação de layout e desenvolvimento completo da plataforma de venda de cursos e video aulas. O usuário que se registrar para ter acesso à área do aluno poderá adquirir cursos, através a integração com a PagSeguro. Este trabalho estou realizando em conjunto com o especialista em Amazon Web Services <a href="https://github.com/joaquimsn" target="_blank">Joaquim Neto</a>.',
     imagem:       'portfolio-coletivo.jpg',
     imagemAlt:    'Coletivo Educação',
     link:         'coletivoeducacao.com.br',
@@ -62,7 +62,7 @@ module.exports = [
       {
         id:            2,
         pagina:        'Planos',
-        descricao:     'A descrição dos planos são apresentadas verticalmente com planos e preços de cada pacote disponíve. Quando o usuário clicar em um dos pacotes, será levado para a página de detalhamento e aquisição do produto.',
+        descricao:     'A descrição dos planos são apresentadas verticalmente com planos e preços de cada pacote disponível. Quando o usuário clicar em um dos pacotes, será levado para a página de detalhamento e aquisição do produto.',
         imagem:        'notifye/notifye-planos.jpg'
       },
       {
@@ -80,7 +80,7 @@ module.exports = [
       {
         id:            5,
         pagina:        'Documentação',
-        descricao:     'A documentação da API de cada produto estará disponível nessa página, além de um fácil acesso à página de documentação do uso do serviço.',
+        descricao:     'A documentação da API de cada produto estará disponível nessa página, além do fácil acesso à página de documentação do uso do serviço.',
         imagem:        'notifye/notifye-docs.jpg'
       }
     ]
@@ -111,7 +111,7 @@ module.exports = [
       {
         id:            3,
         pagina:        'Serviços',
-        descricao:     'Os serviços prestados pela empresa são listados nessa página, com a possiblidade de expansão ou redução de conteúdo exibido.',
+        descricao:     'Os serviços prestados pela empresa são listados nessa página, com a possiblidade de expansão ou redução do conteúdo exibido.',
         imagem:        'locprime/locprime-servicos.jpg'
       },
       {
@@ -166,7 +166,7 @@ module.exports = [
       {
         id:            5,
         pagina:        'Cadastro',
-        descricao:     'O cadastro do usuário é necessita de poucos campos e exige a aceitação do contrato de termos de uso, declarado da sessão da esquerda da página.',
+        descricao:     'O cadastro do usuário necessita de poucos campos e exige a aceitação do contrato de termos de uso, declarado da sessão da esquerda da página.',
         imagem:        'vsr/vsr-cadastro.jpg'
       }
     ]
