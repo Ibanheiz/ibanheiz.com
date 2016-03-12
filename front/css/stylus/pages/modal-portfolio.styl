@@ -3,10 +3,18 @@
   height 100%
   position fixed
   background #000
-  opacity 0.95
+  opacity 0.98
   top 0
   left 0
   z-index 90
+  transition: all linear 0.5s;
+  @media (min-width: em(800px))
+    opacity 0.95
+
+.modal-portfolio-container-background.ng-hide {
+  opacity 0
+  transition all linear 0.5s
+}
 
 .modal-portfolio-container
   width 100%
@@ -15,7 +23,7 @@
   position fixed
   transition all linear 0.5s
   z-index 100
-  padding 2%
+  padding 3.5%
   overflow-y auto
   @media (min-width: em(800px))
     width 90%
@@ -28,25 +36,29 @@
   transition all linear 0.5s
 
 .modal-close
+  width 27px
+  height 27px
   font-family verdana
   cursor pointer
-  font-size rem(30px)
-  color #FFF
+  line-height 20px
+  font-size rem(20px)
   position fixed
-  top 0
+  top 5px
   right 12px
-  color #EEE
+  color main-color
   z-index 1000
+  border 2px solid main-color
+  border-radius 50%
+  text-align center
   @media (min-width: em(800px))
     width 35px
     height 35px
-    font-size rem(23px)
+    line-height 27px
     top 18px
     right 22px
     position fixed
-    border-radius 50%
-    text-align center
     border 2px solid #FFF
+    color #FFF
 
 .modal-header-grid
   width 100%
@@ -58,22 +70,35 @@
 
 .modal-header-titulo-container
   width 100%
-  background main-color
-  padding 3%
+  padding 0
   color #FFF
-  text-align center
-  @media (min-width: em(800px))
-    padding 2% 2%
 
 .modal-header-titulo
   width 100%
   font-size rem(35px)
+  color main-strong-color
   @media (min-width: em(800px))
     font-size rem(55px)
 
-.modal-header-descricao
+.modal-header-subtitulo
   width 100%
   font-size rem(20px)
+  color main-strong-color
+  @media (min-width: em(800px))
+    font-size rem(25px)
+
+.modal-header-descricao
+  width 100%
+  font-size rem(16px)
+  color text-color
+  margin-top 10px
+  @media (min-width: em(800px))
+    font-size rem(18px)
+  a
+    color main-strong-color
+    text-decoration none
+  a:hover
+    text-decoration underline
 
 .modal-header-sobre-container
   width 100%
@@ -92,21 +117,20 @@
 
 .modal-header-sobre-descricao
   font-size rem(15px)
-  color #333
+  color text-color
   @media (min-width: em(800px))
     font-size rem(17px)
   @media (min-width: em(1024px))
-    font-size rem(20px)
+    font-size rem(18px)
 
 .modal-header-sobre-grid
   width 90%
-  display flex
-  position absolute
-  justify-content space-between
-  flex-direction row-reverse
   @media (min-width: em(800px))
     margin-top 10px
-    width 95%
+    width 92%
+    display flex
+    position absolute
+    justify-content space-between
 
 .modal-header-sobre-link-grid
   display flex
@@ -133,10 +157,13 @@
 .modal-header-sobre-andamento
   margin-top 5px
   right 0
+  font-family myriad pro
+  color main-strong-color
 
 .modal-portfolio-imagens-item
   width 100%
   margin-top 5px
+  border 1px solid main-color
 
 .modal-portfolio-imagens-container
   width 96%
@@ -144,6 +171,7 @@
   overflow-y auto
   border-top 3px solid main-color
   padding-top 20px
+  margin-top 20px
   @media (min-width: em(800px))
     width 100%
 
